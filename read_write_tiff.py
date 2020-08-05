@@ -53,8 +53,7 @@ try:
         src_band[src_band == nodataval] = 255
 
         if (band == 0):
-            alpha = np.zeros_like(band)
-            print(alpha.shape)
+            alpha = np.ones_like(src_band)
             output_image.append(alpha)
 
         output_image.append(src_band)
